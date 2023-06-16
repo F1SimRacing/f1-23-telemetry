@@ -15,7 +15,7 @@ class TelemetryListener:
             port = 20777
 
         if not host:
-            host = 'localhost'
+            host = '0.0.0.0'
 
         self.socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         self.socket.bind((host, port))

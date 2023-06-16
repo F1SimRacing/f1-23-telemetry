@@ -27,5 +27,5 @@ packet = listener.get()
 ```commandline
 pip install --upgrade build twine
 python -m build
-python3 -m twine upload f1-23-telemetry
+python3 -m twine upload f1-23-telemetry dist/
 ```

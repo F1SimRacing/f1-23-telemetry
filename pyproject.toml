@@ -18,6 +18,10 @@ classifiers = [
 "Homepage" = "https://github.com/chrishannam/f1-23-telemetry"
 "Bug Tracker" = "https://github.com/chrishannam/f1-23-telemetry/issues"
 
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [tool.black]
 line-length = 120
 exclude = '''

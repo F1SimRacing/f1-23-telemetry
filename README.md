@@ -1,7 +1,6 @@
-# F1 23 Telemetry
-
-# Main Source for this Project
-The F1 23 UDP specification is available [here](https://answers.ea.com/t5/General-Discussion/F1-23-UDP-Specification/td-p/12632888)
+# F1 23 Telemetry Supporting v29x3
+Currently supporting the `v29x3: Update game mode IDs in the appendix` version from
+the F1 23 UDP specification which is available [here](https://answers.ea.com/t5/General-Discussion/F1-23-UDP-Specification/td-p/12632888)
 
 # Installing
 

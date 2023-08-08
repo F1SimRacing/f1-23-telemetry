@@ -6,10 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0-v29x3] - TBC
+## [0.1.1] - 2023-08-08
 ### Added
 * Project guideline files.
-* Append version of USP spec to the version to make it clear what we support.
 
 ## [0.0.1] - 2023-06-16
 ### Added

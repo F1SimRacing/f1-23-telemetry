@@ -131,7 +131,7 @@ class PacketHeader(Packet):
 
     _fields_ = [
         ("packet_format", ctypes.c_uint16),  # 2023
-        ("game_uear", ctypes.c_uint8),  # Game major version - "X.00"
+        ("game_year", ctypes.c_uint8),  # Game major version - "X.00"
         ("game_major_version", ctypes.c_uint8),  # Game major version - "X.00"
         ("game_minor_version", ctypes.c_uint8),  # Game minor version - "1.XX"
         ("packet_version", ctypes.c_uint8),  # Version of this packet type, all start from 1
@@ -437,12 +437,12 @@ class LapData(Packet):
     _fields_ = [
         ("last_lap_time_in_ms", ctypes.c_uint32),  # Last lap time in milliseconds
         ("current_lap_time_in_ms", ctypes.c_uint32),  # Current time around the lap in milliseconds
-        ("sector1TimeInMS", ctypes.c_uint16),  # Sector 1 time in milliseconds
-        ("sector1TimeMinutes", ctypes.c_uint8),  # Sector 1 whole minute part
-        ("sector2TimeInMS", ctypes.c_uint16),  # Sector 2 time in milliseconds
-        ("sector2TimeMinutes", ctypes.c_uint8),  # Sector 2 whole minute part
-        ("deltaToCarInFrontInMS", ctypes.c_uint16),  # Time delta to car in front, in milliseconds
-        ("deltaToRaceLeaderInMS", ctypes.c_uint16),  # Time delta to race leader in milliseconds
+        ("sector_1_time_in_ms", ctypes.c_uint16),  # Sector 1 time in milliseconds
+        ("sector_1_time_minutes", ctypes.c_uint8),  # Sector 1 whole minute part
+        ("sector_2_time_in_ms", ctypes.c_uint16),  # Sector 2 time in milliseconds
+        ("sector_2_time_minutes", ctypes.c_uint8),  # Sector 2 whole minute part
+        ("delta_to_car_in_front_in_ms", ctypes.c_uint16),  # Time delta to car in front, in milliseconds
+        ("delta_to_race_leader_in_ms", ctypes.c_uint16),  # Time delta to race leader in milliseconds
         ("lap_distance", ctypes.c_float),  # Distance vehicle is around current lap in metres – could
         # be negative if line hasn’t been crossed yet
         ("total_distance", ctypes.c_float),  # Total distance travelled in session in metres – could

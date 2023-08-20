@@ -130,18 +130,19 @@ class PacketHeader(Packet):
     """
 
     _fields_ = [
-        ("packet_format", ctypes.c_uint16),  # 2023
-        ("game_year", ctypes.c_uint8),  # Game major version - "X.00"
+        ("packet_format", ctypes.c_int16),  # 2023
+        ("game_year", ctypes.c_uint8),  # Game year - last two digits e.g. 23
         ("game_major_version", ctypes.c_uint8),  # Game major version - "X.00"
         ("game_minor_version", ctypes.c_uint8),  # Game minor version - "1.XX"
         ("packet_version", ctypes.c_uint8),  # Version of this packet type, all start from 1
-        ("packet_id", ctypes.c_uint8),  # Identifier for the packet type, see below
-        ("session_uid", ctypes.c_uint64),  # Unique identifier for the session
+        ("packet_id", ctypes.c_uint8),  # Identifier for the packet type
+        ("session_uid", ctypes.c_uint64),  # unique identifier for the session
         ("session_time", ctypes.c_float),  # Session timestamp
         ("frame_identifier", ctypes.c_uint32),  # Identifier for the frame the data was retrieved on
-        ("overall_frame_identifier", ctypes.c_uint32),  # Identifier for the frame the data was retrieved on
+        ("overall_frame_identifier", ctypes.c_uint32),  # Overall identifier for the frame the data was retrieved
+        # on, doesn't go back after flashbacks
         ("player_car_index", ctypes.c_uint8),  # Index of player's car in the array
-        ("secondary_player_car_index", ctypes.c_uint8),  # Index of secondary player's car in the array (split screen)
+        ("secondary_player_car_index", ctypes.c_uint8),  # Index of secondary player's car in the array (splitscreen)
         # 255 if no second player
     ]
 

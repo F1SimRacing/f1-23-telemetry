@@ -1172,14 +1172,14 @@ class PacketMotionExData(Packet):
 
     _fields_ = [
         ("header", PacketHeader),  # Header
-        ("m_suspensionPosition", ctypes.c_float),  # Note: All wheel arrays have the following order:
-        ("m_suspensionVelocity", ctypes.c_float),  # RL, RR, FL, FR
-        ("m_suspensionAcceleration", ctypes.c_float),  # RL, RR, FL, FR
-        ("m_wheelSpeed", ctypes.c_float),  # Speed of each wheel
-        ("m_wheelSlipRatio", ctypes.c_float),  # Slip ratio for each wheel
-        ("m_wheelSlipAngle", ctypes.c_float),  # Slip angles for each wheel
-        ("m_wheelLatForce", ctypes.c_float),  # Lateral forces for each wheel
-        ("m_wheelLongForce", ctypes.c_float),  # Longitudinal forces for each wheel
+        ("m_suspensionPosition", ctypes.c_float * 4),  # Note: All wheel arrays have the following order:
+        ("m_suspensionVelocity", ctypes.c_float * 4),  # RL, RR, FL, FR
+        ("m_suspensionAcceleration", ctypes.c_float * 4),  # RL, RR, FL, FR
+        ("m_wheelSpeed", ctypes.c_float * 4),  # Speed of each wheel
+        ("m_wheelSlipRatio", ctypes.c_float * 4),  # Slip ratio for each wheel
+        ("m_wheelSlipAngle", ctypes.c_float * 4),  # Slip angles for each wheel
+        ("m_wheelLatForce", ctypes.c_float * 4),  # Lateral forces for each wheel
+        ("m_wheelLongForce", ctypes.c_float * 4),  # Longitudinal forces for each wheel
         ("m_heightOfCOGAboveGround", ctypes.c_float),  # Height of centre of gravity above ground
         ("m_localVelocityX", ctypes.c_float),  # Velocity in local space – metres/s
         ("m_localVelocityY", ctypes.c_float),  # Velocity in local space

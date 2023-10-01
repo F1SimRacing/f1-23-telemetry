@@ -1,7 +1,7 @@
-'''
+"""
 More info is available here:
 https://answers.ea.com/t5/General-Discussion/F1-23-UDP-Specification/td-p/12632888?attachment-id=704910
-'''
+"""
 
 TEAM_IDS = {
     0: 'Mercedes',
